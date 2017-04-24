@@ -1,0 +1,29 @@
+<?php
+/**
+ * Header - Login Link
+ */
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+$customer_id = $customerSession->getCustomerId();  // get Customer Id
+
+if($customer_id){
+    // do your code
+    echo $customer_id;
+}
+
+?>
+<?php if( $customerSession->isLoggedIn() ): ?>
+<div class="login_link logged_in">
+    <a href="<?php echo $block->getUrl('customer/account/logout'); ?>">
+        <span class="label"><?php echo $customerSession->getCustomer()->getName(); ?></span>
+        <span class="points"><?php echo __('5,078 ptos'); ?></span>
+    </a>
+</div>
+<?php else: ?>
+<div class="login_link logged_out">
+    <a href="<?php echo $block->getUrl('customer/account/login'); ?>">
+        <span class="label"><?php echo __('Conéctate'); ?></span>
+    </a>
+</div>
+<?php endif; ?>
