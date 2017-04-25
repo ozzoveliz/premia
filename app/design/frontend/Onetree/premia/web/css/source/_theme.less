@@ -1,16 +1,42 @@
-//Fonts
-@font-family__montserratregular: 'montserratregular';
-@font-family__montserratmedium: 'montserratmedium';
-@font-family__montserratbold: 'montserratbold';
-@font-family__montserratsemibold: 'montserratsemibold';
-@font-family__montserratextrabold: 'montserratextrabold';
-@font-family__montserratlight: 'montserratlight';
+// /**
+//  * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Premia theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
 
 //  Header
 @header__background-color: #253540;
 @header-icons-color: @color-white;
 
+//Images
 @images: "../images";
+
+//Navigation
+@navigation__background: @color__Ebony-Clay;
+@navigation-level0-item__color: @color-white;
+@navigation-level0-item__font-size: 12;
+@navigation-level0-item__font-weight: @font-weight__regular;
+@navigation-level0-item__line-height: 39px;
+
+@navigation-level0-item__border: 1px solid @color-white;
+
+@navigation-level0-item__active__border-color: @color__Ebony-Clay;
+@navigation-level0-item__active__color: @color__Pistachio;
+
+@submenu__font-size: 14;
+@submenu-item__line-height: 39px;
+
+@submenu-item__color: @color-white;
+
+@submenu-item__active__border-color: @color__Ebony-Clay;
+@submenu-item__active__color: @color__Pistachio;
 
 .header {
     &.content {
@@ -20,6 +46,13 @@
 .logo {
     margin: 3px 0 0 92px;
     max-width: 336px;
+}
+.page-header {
+    .panel {
+        &.wrapper {
+            display: none;
+        }
+    }
 }
 .nav-toggle {
     left: 25px;

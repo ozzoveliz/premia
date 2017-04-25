@@ -48,6 +48,7 @@
 //  Mobile
 //  _____________________________________________
 
+/*.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {*/
 .media-width(@extremum, @break) when (@break = @screen__m) {
     .navigation {
         padding: 0;
@@ -272,10 +273,11 @@
 //  Desktop
 //  _____________________________________________
 
+/*.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {*/
 .media-width(@extremum, @break) when (@extremum = 'min') {
-    /*.nav-toggle {
-        display: none;
-    }*/
+    .nav-toggle {
+        /*display: none;*/
+    }
 
     .nav-sections {
         .lib-vendor-prefix-flex-shrink(0);
@@ -283,11 +285,13 @@
         margin-bottom: @indent__m;
     }
 
-    /*.nav-sections-item-title {
+    .nav-sections-item-title {
         display: none;
-    }*/
+    }
 
     .nav-sections-item-content {
+        /*display: block !important;*/
+
         display: block;
     }
 
@@ -301,7 +305,7 @@
         }
     }
 
-    //.lib-main-navigation-desktop();
+    /*.lib-main-navigation-desktop();*/
 
     .panel.header {
         .links,
