@@ -5,6 +5,6 @@
      */
 \Magento\Framework\Component\ComponentRegistrar::register(
         \Magento\Framework\Component\ComponentRegistrar::THEME,
-        'frontend/Onetree/premia',
+        'frontend/Premia/default',
         __DIR__
     );
