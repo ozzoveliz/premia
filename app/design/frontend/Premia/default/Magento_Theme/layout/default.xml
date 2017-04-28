@@ -3,8 +3,10 @@
         <referenceBlock name="top.search" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
-        <referenceBlock name="form.subscribe" remove="true" />
+        <!--<referenceBlock name="form.subscribe" remove="true" />-->
         <referenceBlock name="copyright" remove="true" />
+
+        <move element="form.subscribe" destination="footer.top" after="-" />
 
         <referenceBlock name="logo">
             <arguments>
@@ -18,6 +20,13 @@
         </referenceContainer>
 
         <referenceContainer name="footer-container">
+            <container name="footer.top" as="footer.top" label="Footer Top" htmlTag="div" htmlClass="footer top" before="footer.links">
+                <block class="Magento\Cms\Block\Block" name="footer_social_links">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-social-links</argument>
+                    </arguments>
+                </block>
+            </container>
             <container name="footer.links" as="footer.links" label="Footer Links" htmlTag="div" htmlClass="footer links" before="footer">
                 <block class="Magento\Cms\Block\Block" name="footer_links_1">
                     <arguments>
