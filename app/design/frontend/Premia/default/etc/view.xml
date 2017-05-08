@@ -21,8 +21,8 @@
                 <height>160</height>
             </image>
             <image id="category_page_grid" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>148</width>
+                <height>148</height>
             </image>
             <image id="category_page_list" type="small_image">
                 <width>240</width>

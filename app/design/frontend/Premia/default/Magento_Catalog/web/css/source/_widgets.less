@@ -85,6 +85,15 @@
     .page-layout-3columns .block.widget .products-grid .product-item {
         width: 100%/2;
     }
+    .page-layout-2columns-left {
+        .column.main {
+            width: 65%;
+        }
+        .sidebar-main {
+            padding-right: 0;
+            width: 35%;
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -116,6 +125,22 @@
 
         &:nth-child(4n + 1) {
             margin-left: 0;
+        }
+    }
+    .page-products {
+        .products-grid {
+            .product-items {
+                margin: 0;
+            }
+
+            .product-item {
+                margin-left: calc(~'(100% - 3 * 33.333%) / 3');
+                width: 100%/3;
+
+                &:nth-child(3n + 1) {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
