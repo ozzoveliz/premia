@@ -1,0 +1,63 @@
+// /**
+//  * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .pages {
+        .lib-pager(
+            @_pager-action-border: false,
+            @_pager-action-background: @toolbar-element-background,
+            @_pager-action-background-hover: @color__Ebony-Clay,
+            @_pager-action-color: @color-black,
+            @_pager-action-color-hover: @color-white,
+            @_pager-action-color-visited: @color-white,
+            @_pager-background: @toolbar-element-background,
+            @_pager-color: @color-gray20,
+            @_pager-color-hover: @color-white,
+            @_pager-color-visited: @color-white,
+            @_pager-current-background: @color__Ebony-Clay,
+            @_pager-current-color: @color-white,
+            @_pager-icon-font-margin: false,
+            @_pager-icon-font-size: 14px,
+            @_pager-icon-next-content: @icon-arrow-right-thin,
+            @_pager-icon-previous-content: @icon-arrow-left-thin,
+            @_pager-item-margin: 0 5px,
+            @_pager-line-height: 40px,
+            @_pager-font-size: 14px,
+            @_pager-font-weight: @font-weight__regular
+        );
+
+        .items {
+            .item {
+                .page {
+                    .lib-css(font-family, @font-family__montserratmedium);
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 32px;
+                }
+                .action {
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+
+        .action {
+            width: 34px;
+
+            &.previous {
+                margin-right: 12px;
+            }
+
+            &.next {
+                margin-left: 12px;
+            }
+        }
+    }
+}
